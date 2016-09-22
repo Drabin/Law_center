@@ -1,0 +1,149 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+}
+h1 {
+	font-size: 200%;
+}
+
+body{
+	background-color: #e9ebee;
+}
+
+/* general */
+.container {
+	width: 900px;
+	margin: 0 auto;
+}
+
+.row {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.pull-right {
+	float: right;
+}
+
+/* header */
+header {
+	width: 100%;
+	background-color: rgba(0,122,135,0.43);
+}
+
+nav {
+	width: 900px;
+	margin: 0 auto;
+}
+
+nav ul {
+	padding: 20px 0;
+}
+
+nav li {
+	display: inline-block;
+	margin: 0 40px 0 0;
+}
+
+nav li a {
+	text-decoration: none;
+	font-size: 16px;
+	color: black;
+}
+
+/* end of header styles */
+
+/* Login page */
+#login-box {
+	margin: 100px 160px;
+	background-color: white;
+	padding: 40px;
+}
+
+#login-box h1 {
+	text-align: center;
+}
+#login-box form {
+	width: 80%;
+	margin: 0 auto;
+}
+#login-box input {
+	width: 270px;	
+	height: 22px;
+	margin: 5px 0 5px 40px;
+	padding: 5px 8px;
+}
+
+#login-box button {
+	width: 290px;
+	height: 40px;
+	margin: 5px 0 5px 40px;
+	padding: 5px 8px;
+    background-color: rgba(0,122,135,0.43);
+    border: 1px solid rgba(0,122,135,0.43); 
+}
+#login-box .to-signup {
+	position: relative;
+	width: 50%;
+	margin: 10px auto;
+	left: 80px;   
+}
+
+#login-box a {
+	text-decoration: none;
+	color:rgba(0,122,135,1);
+}
+
+/* end of login page */
+
+/* signup page */ 
+#signup-step-one{
+	margin: 100px 160px;
+	background-color: white;
+	padding: 40px;
+}
+#signup-step-one h2 {
+	position: relative;
+	left: -80px;
+	bottom:30px;
+	width: 80px;
+	text-align: center;
+	border: 1px solid rgba(0,122,135,0.43);
+	border-radius: 3px;
+	background-color: rgba(0,122,135,0.43);
+}
+
+#signup-step-one h1 {
+	text-align: center;
+}
+#signup-step-one form {
+	width: 80%;
+	margin: 0 auto;
+}
+#signup-step-one input {
+	width: 270px;	
+	height: 22px;
+	margin: 5px 0 5px 40px;
+	padding: 5px 8px;
+}
+
+#signup-step-one button {
+	width: 290px;
+	height: 40px;
+	margin: 5px 0 5px 40px;
+	padding: 5px 8px;
+    background-color: rgba(0,122,135,0.43);
+    border: 1px solid rgba(0,122,135,0.43); 
+}
+
+
+
+
+
+
+
+
+
+
+
