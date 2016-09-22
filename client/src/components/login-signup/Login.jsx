@@ -34,9 +34,11 @@ class Login extends React.Component {
         <form onSubmit={handleSubmit(this.handleFormSubmit)}>
           <div className="row">
             <input {...email} type="text" placeholder="Email" />
+            {email.touched && email.error && <div>{email.error}</div>}
           </div>
           <div className="row">
             <input {...password} type="password" placeholder="Password" />
+            {password.touched && password.error && <div>{password.error}</div>}
           </div>
           <div className="row">
             {this.renderAlert()}

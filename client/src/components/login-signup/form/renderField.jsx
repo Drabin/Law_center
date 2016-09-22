@@ -1,6 +1,6 @@
 /* eslint react/prop-types: 0 */
 
-// Version 6 of redux form will refactor later
+// -------------Version 6 of redux form will refactor later---------------
 
 // import React, { PropTypes } from 'react';
 
