@@ -11,7 +11,18 @@ class Signup extends React.Component {
   }
 
   handleFormSubmit({ email, password }) {
-    console.log(email, password);
+    this.props.signupUser({ email, password });
+  }
+
+  renderAlert() {
+    if (this.props.errorMessage) {
+      return (
+        <div>
+          <strong>Oops!</strong> {this.props.errorMessage}
+        </div>
+      );
+    }
+    return null;
   }
 
   render() {
@@ -19,7 +30,7 @@ class Signup extends React.Component {
     return (
       <div id="signup-step-one">
         <h1>Signup</h1>
-        <form onSubmit={handleSubmit(this.handleSubmit)}>
+        <form onSubmit={handleSubmit(this.handleFormSubmit)}>
           <div className="row">
             <input {...email} type="email" placeholder="Email" />
             {email.touched && email.error && <div>{email.error}</div>}
@@ -32,6 +43,7 @@ class Signup extends React.Component {
             <input {...confirmPass} type="password" placeholder="Confirm Password" />
           </div>
           <div className="row">
+            {this.renderAlert()}
             <button>Sign up</button>
           </div>
         </form>
@@ -40,15 +52,21 @@ class Signup extends React.Component {
   }
 }
 
+function mapStateToProps(state) {
+  return {
+    errorMessage: state.auth.error,
+  };
+}
 
 Signup.propTypes = {
-  onSignupOne: PropTypes.func,
+  signupUser: PropTypes.func,
   handleSubmit: PropTypes.func,
   fields: PropTypes.object,
+  errorMessage: PropTypes.string,
 };
 
 export default reduxForm({
   form: 'Signup',
   fields: ['email', 'password', 'confirmPass'],
   validate,
-}, null, actions)(Signup);
+}, mapStateToProps, actions)(Signup);

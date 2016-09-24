@@ -5,13 +5,13 @@
 node_modules/
 bower_components/
 *.log
-client/public/bundle.min.js
 
 # 
 build/
 dist/
 server/config/dev.env
 server/db/seedData/seed.json
+client/public/bundle.min.js
 
 # Webpack
 client/public/webpack*

@@ -16,6 +16,23 @@ export function authError(error) {
   };
 }
 
+export function signupUser({ email, password }) {
+  return (dispatch) => {
+    axios.post(`${API_URL}/signup`, { email, password })
+    .then((response) => {
+      // if request is good indicate user is authenticated
+      dispatch({ type: AUTH_USER });
+      // save token to browser
+      localStorage.setItem('token', response.data.token);
+      // redirect to dashboard
+      browserHistory.push('/dashboard');
+    })
+    .catch((response) => {
+      dispatch(authError(response.data.error));
+    });
+  };
+}
+
 export function loginUser({ email, password }) {
   return (dispatch) => {
     // sending email/password to API server
@@ -35,7 +52,6 @@ export function loginUser({ email, password }) {
 }
 
 export function logoutUser() {
-  console.log('hey');
   localStorage.removeItem('token');
 
   return { type: UNAUTH_USER };
