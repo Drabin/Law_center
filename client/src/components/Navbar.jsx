@@ -20,6 +20,9 @@ class Navbar extends React.Component {
       <li className="pull-right" key={2}>
         <Link to="/signup">Signup</Link>
       </li>,
+      <li className="pull-right" key={0}>
+        <Link to="/lawyerSignup">Lawyer?</Link>
+      </li>,
     ];
   }
 
@@ -31,7 +34,6 @@ class Navbar extends React.Component {
             <li><a href="#">Logo</a></li>
             <li><a href="#">Profile</a></li>
             <li><a href="#">Messages</a></li>
-            <li><a href="#">Events</a></li>
             {this.authCheck()}
           </ul>
         </nav>

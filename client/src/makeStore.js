@@ -7,7 +7,6 @@ import reducer from './reducers/rootReducer.js';
 
 export const makeStore = initialState => {
   const devtoolsExt = window.devToolsExtension();
-  console.log(devtoolsExt);
   const middlewares = [
     thunkMiddleware,
     routerMiddleware(browserHistory),
