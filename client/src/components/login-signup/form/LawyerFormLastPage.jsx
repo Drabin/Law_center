@@ -16,7 +16,7 @@ const LawyerFormLastPage = (props) => {
       <h1>Signup</h1>
       <form onSubmit={handleSubmit}>
         <div className="row">
-          <input {...barNumber} type="text" placeholder="Bar Number " />
+          <input {...barNumber} type="text" placeholder="Bar Number" />
           {barNumber.touched && barNumber.error && <div>{barNumber.error}</div>}
         </div>
         <div className="row">

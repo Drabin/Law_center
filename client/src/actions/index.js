@@ -16,9 +16,9 @@ export function authError(error) {
   };
 }
 
-export function signupUser({ email, password }) {
+export function signup({ type, email, password }) {
   return (dispatch) => {
-    axios.post(`${API_URL}/signup`, { email, password })
+    axios.post(`${API_URL}/signup`, { type, email, password })
     .then((response) => {
       // if request is good indicate user is authenticated
       dispatch({ type: AUTH_USER });

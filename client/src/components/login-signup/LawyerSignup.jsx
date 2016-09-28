@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import LawyerFormFirstPage from './form/LawyerFormFirstPage.jsx';
 import LawyerFormLastPage from './form/LawyerFormLastPage.jsx';
-
+import * as actions from '../../actions/index.js';
 
 class LawyerSignup extends React.Component {
   constructor(props) {
@@ -13,7 +13,12 @@ class LawyerSignup extends React.Component {
     this.state = {
       page: 1,
     };
+    // this.handleFormSubmit = this.handleFormSubmit.bind(this);
   }
+
+  // handleFormSubmit({ email, password }) {
+  //   this.props.signup({ email, password });
+  // }
 
   nextPage() {
     this.setState({
@@ -68,4 +73,4 @@ LawyerSignup.propTypes = {
   errorMessage: PropTypes.string,
 };
 
-export default connect(mapStateToProps)(LawyerSignup);
+export default connect(mapStateToProps, actions)(LawyerSignup);

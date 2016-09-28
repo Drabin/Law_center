@@ -11,7 +11,7 @@ class Signup extends React.Component {
   }
 
   handleFormSubmit({ email, password }) {
-    this.props.signupUser({ email, password });
+    this.props.signup({ type: 'user', email, password });
   }
 
   renderAlert() {
@@ -59,7 +59,7 @@ function mapStateToProps(state) {
 }
 
 Signup.propTypes = {
-  signupUser: PropTypes.func,
+  signup: PropTypes.func,
   handleSubmit: PropTypes.func,
   fields: PropTypes.object,
   errorMessage: PropTypes.string,
