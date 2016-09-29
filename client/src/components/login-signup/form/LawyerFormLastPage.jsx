@@ -24,7 +24,15 @@ const LawyerFormLastPage = (props) => {
           {company.touched && company.error && <div>{company.error}</div>}
         </div>
         <div className="row">
-          <input {...typeOfLaw} type="text" placeholder="Type of law" />
+          <label>Cannabis
+            <input
+              {...typeOfLaw} onClick={e => { console.log(e, typeOfLaw.value); }}
+              name="type" type="checkbox" value="Cannabis"
+            />
+          </label>
+          <label>Trademark
+            <input {...typeOfLaw} name="type" type="checkbox" value="Trademark" />
+          </label>
         </div>
         <div className="row">
           {props.onError()}
